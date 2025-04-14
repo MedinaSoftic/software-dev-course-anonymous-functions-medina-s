@@ -61,7 +61,8 @@ const todos = [
   3. Change the `completed` property to `true` for every task.
   */
   
-  let completedTasks = todos.map((todos) => Boolean(todos.completed = true));
+  let completedTasks = todos.map(todos => (todos.completed, true))
+  
 
   /*
   🔹 Task 4: Combine Filters
@@ -72,7 +73,9 @@ const todos = [
   3. Use method chaining to perform both steps together.
   */
   
-  let incompletedTasksSorted = todos.filter((todos) => !Boolean(todos.completed)).sort((a, b) => a.priority - b.priority); 
+  let incompletedTasksSorted = todos
+  .filter(todo => !todo.completed)
+  .sort((a, b) => a.priority - b.priority); 
 
   // ============================================
   // 🧪 Console Test Your Work
